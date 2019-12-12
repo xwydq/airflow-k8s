@@ -1,0 +1,7 @@
+.git
+*.pyc
+.idea/
+deployedDags/
+__pycache__/
+files/
+logs/

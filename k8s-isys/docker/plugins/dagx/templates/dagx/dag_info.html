@@ -1,0 +1,153 @@
+
+<div id="dag-info" class="info dag-info">
+    <div class="info-row">
+        <span class="property">任务流名称：</span>
+        <input type="text" class="form-control" name="name">
+    </div>
+    <div class="info-row">
+        <span class="property">调度时间：</span>
+        <input type="text" class="form-control" name="crond">
+    </div>
+    <div class="info-row">
+        <span class="property">开始时间：</span>
+        <input type="text" class="form-control" name="start_date">
+    </div>
+    <div class="info-row">
+        <span class="property">结束时间：</span>
+        <input type="text" class="form-control" name="end_date">
+    </div>
+
+    <hr style="filter: alpha(opacity=100, finishopacity=0, style=3)" width="80%" color=#987cb9 SIZE=5>
+     <div class="info-row">
+        <span class="property">重试次数：</span>
+        <input type="number" class="form-control" name="retries"  min="0" step="1" >
+    </div>
+    <div class="info-row">
+        <span class="property">重试时间间隔(分钟)：</span>
+        <input type="number" class="form-control" name="retry_delay_minutes" min="0" step="1" >
+    </div>
+    <div class="info-row">
+        <span class="property">失败邮件通知：</span>
+        <input type="checkbox" class="form-control" name="email_on_failure"  data-size="mini" >
+    </div>
+    <div class="info-row">
+        <span class="property">重试邮件通知：</span>
+        <input type="checkbox" class="form-control" name="email_on_retry" data-toggle="toggle" data-size="mini" >
+    </div>
+    <div class="info-row">
+        <span class="property">依赖过去：</span>
+        <input type="checkbox" class="form-control" name="depends_on_past" data-toggle="toggle" data-size="mini" >
+    </div>
+    <div class="info-row">
+        <span class="property">并发数：</span>
+        <input type="number" class="form-control" name="concurrency"  min="0" step="1" >
+    </div>
+    <div class="info-row">
+        <span class="property">最大活跃数：</span>
+        <input type="number" class="form-control" name="max_active_runs"  min="0" step="1" value="16">
+    </div>
+    <div class="info-row">
+        <span class="property">跳过历史DAG：</span>
+        <input type="checkbox" class="form-control" name="skip_dag_not_latest"  data-toggle="toggle" data-size="mini" >
+    </div>
+    <div class="info-row">
+        <span class="property">收件人地址：</span>
+        <input type="text" class="form-control" name="emails"  value="xuwy@isyscore.com" >
+    </div>
+
+    <!--<div class="panel panel-default advanced-settings-collapse">-->
+        <!--<div class="panel-heading" role="tab" id="dag_advanced_settings_header">-->
+            <!--<h4 class="panel-title">-->
+                <!--<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#dag_advanced_settings" aria-expanded="false" aria-controls="dag_advanced_settings">高级设置</a>-->
+                <!--<span class="advanced-settings-tool-bar">-->
+                    <!--<a href="javascript:void(0)" class="advanced-settings-expand-all advanced-settings-tool">展开</a>-->
+                    <!--<span class="advanced-settings-tool">/</span>-->
+                    <!--<a href="javascript:void(0)" class="advanced-settings-collapse-all advanced-settings-tool" style="margin-right: 20px;">收缩</a>-->
+                <!--</span>-->
+            <!--</h4>-->
+        <!--</div>-->
+        <!--<div id="dag_advanced_settings" class="panel-collapse collapse" style="background: transparent;" role="tabpanel" aria-labelledby="dag_advanced_settings_header">-->
+            <!--<div class="panel-body">-->
+                <!--&lt;!&ndash;<div class="info-row">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="property">重试次数：</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<input type="number" class="form-control" name="retries"  min="0" step="1" >&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="info-row">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="property">重试时间间隔(分钟)：</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<input type="number" class="form-control" name="retry_delay_minutes" min="0" step="1" >&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="info-row">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="property">失败邮件通知：</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<input type="checkbox" class="form-control" name="email_on_failure" data-toggle="toggle" data-size="mini" checked="checked">&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="info-row">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="property">重试邮件通知：</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<input type="checkbox" class="form-control" name="email_on_retry" data-toggle="toggle" data-size="mini" checked="checked">&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="info-row">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="property">依赖过去：</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<input type="checkbox" class="form-control" name="depends_on_past" data-toggle="toggle" data-size="mini" checked="checked">&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="info-row">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="property">并发数：</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<input type="number" class="form-control" name="concurrency"  min="0" step="1" >&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="info-row">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="property">最大活跃数：</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<input type="number" class="form-control" name="max_active_runs"  min="0" step="1" value="16">&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="info-row">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="property">跳过历史DAG：</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<input type="checkbox" class="form-control" name="skip_dag_not_latest"  data-toggle="toggle" data-size="mini" checked="checked" >&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="info-row">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="property">收件人地址：</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<input type="text" class="form-control" name="emails"  value="xuwy@isyscore.com" >&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+
+    {% include "dagx/info_actions.html" %}
+    <script>
+        $('input[name="start_date"]').daterangepicker({
+            autoApply: true, 
+            singleDatePicker: true,
+            showDropdowns: true,
+            timePicker: true,
+            timePicker24Hour: true,
+            timePickerSeconds: true,
+            showWeekNumbers: true,
+            locale: {
+                format: 'YYYY-MM-DD HH:mm:ss',
+                applyLabel: '确定',
+                cancelLabel: '取消'
+            }
+        });
+        $('input[name="end_date"]').daterangepicker({
+            autoApply: true, 
+            singleDatePicker: true,
+            showDropdowns: true,
+            timePicker: true,
+            timePicker24Hour: true,
+            timePickerSeconds: true,
+            showWeekNumbers: true,
+            locale: {
+                format: 'YYYY-MM-DD HH:mm:ss',
+                applyLabel: '确定',
+                cancelLabel: '取消'
+            }
+        });
+
+        $("body").on("click", ".advanced-settings-expand-all", function(e) {
+            $('.advanced-settings-collapse .collapse').collapse('show');
+        });
+
+        $("body").on("click", ".advanced-settings-collapse-all", function(e) {
+            $('.advanced-settings-collapse .collapse').collapse('hide');
+        });
+    </script>
+</div>
+
